@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Elettronico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #1a237e;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #283593;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3949ab;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1a237e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3949ab;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .add-button {
+            background-color: #3949ab;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Registro Elettronico</h1>
+    </header>
+
+    <nav>
+        <a href="#compiti">Compiti</a>
+        <a href="#voti">Voti</a>
+        <a href="#assenze">Assenze</a>
+        <a href="#altre-sezioni">Altre Sezioni</a>
+    </nav>
+
+    <main>
+
+        <section id="compiti">
+            <h2>Compiti</h2>
+            <p>Ecco alcuni compiti assegnati:</p>
+            <ul>
+                <li>Matematica - Pag. 50, Esercizi 1-10</li>
+                <li>Italiano - Scrivi un riassunto del libro</li>
+                <li>Scienze - Progetto sul sistema solare</li>
+            </ul>
+        </section>
+
+        <section id="voti">
+            <h2>Voti</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Materia</th>
+                        <th>Voto</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matematica</td>
+                        <td>8</td>
+                        <td>01/01/2023</td>
+                    </tr>
+                    <tr>
+                        <td>Italiano</td>
+                        <td>7</td>
+                        <td>02/01/2023</td>
+                    </tr>
+                    <tr>
+                        <td>Scienze</td>
+                        <td>9</td>
+                        <td>03/01/2023</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-button" onclick="openModal('voti')">Aggiungi Voto</button>
+        </section>
+
+        <section id="assenze">
+            <h2>Assenze</h2>
+            <p>Elenco delle assenze:</p>
+            <ul>
+                <li>Assenza il 05/01/2023 - Malattia</li>
+                <li>Assenza il 10/01/2023 - Impegno familiare</li>
+                <li>Assenza il 15/01/2023 - Viaggio</li>
+            </ul>
+        </section>
+
+        <section id="altre-sezioni">
+            <h2>Altre Sezioni</h2>
+            <p>Contenuto delle altre sezioni qui...</p>
+        </section>
+
+    </main>
+
+    <!-- Aggiungi modali e script qui -->
+
+</body>
+</html>
